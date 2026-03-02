@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Kos extends Model
+{
+    protected $table = 'kos';
+
+    protected $fillable = [
+        'nama',
+        'alamat',
+        'kota',
+        'harga',
+        'deskripsi'
+    ];
+}
