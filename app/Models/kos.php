@@ -13,6 +13,7 @@ class Kos extends Model
         'alamat',
         'kota',
         'harga',
-        'deskripsi'
+        'deskripsi',
+        'foto'
     ];
 }

@@ -20,7 +20,7 @@
 <th>Alamat</th>
 <th>Kota</th>
 <th>Harga</th>
-<th>Deskripsi</th>
+<th width="250">Deskripsi</th>
 <th>Aksi</th>
 </tr>
 
@@ -28,7 +28,6 @@
 <tr>
 
 <td>
-
 @php
 $fotos = json_decode($kos->foto);
 @endphp
@@ -38,24 +37,18 @@ $fotos = json_decode($kos->foto);
 <img src="{{ asset('storage/'.$foto) }}" width="120">
 @endforeach
 @endif
-
 </td>
 
 <td>{{ $kos->nama }}</td>
 <td>{{ $kos->alamat }}</td>
 <td>{{ $kos->kota }}</td>
 <td>{{ $kos->harga }}</td>
-<td>{{ $kos->deskripsi }}</td>
+<td style="max-width:250px; word-wrap:break-word;">
+{{ $kos->deskripsi }}
+</td>
 
 <td>
-    <a href="/kos/{{ $kos->id }}">Detail</a> |
-    <a href="/kos/{{ $kos->id }}/edit">Edit</a> |
-
-    <form action="/kos/{{ $kos->id }}" method="POST" style="display:inline;">
-        @csrf
-        @method('DELETE')
-        <button type="submit" onclick="return confirm('Yakin mau hapus kos ini?')">Hapus</button>
-    </form>
+<a href="/kos/{{ $kos->id }}">Detail</a>
 </td>
 
 </tr>

@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Kos</title>
+    <title>Halaman Utama</title>
 </head>
 <body>
 
-<h1>Daftar Kos</h1>
+<h2>Selamat Datang di Sistem Kos</h2>
 
-@forelse($dataKos as $kos)
-    <div style="border:1px solid black; padding:10px; margin-bottom:10px;">
-        <h3>{{ $kos->nama }}</h3>
-        <p>Alamat: {{ $kos->alamat }}</p>
-        <p>Kota: {{ $kos->kota }}</p>
-        <p>Harga: Rp {{ $kos->harga }}</p>
-        <p>{{ $kos->deskripsi }}</p>
-    </div>
-@empty
-    <p>Belum ada data kos.</p>
-@endforelse
+<a href="/kos">Lihat Daftar Kos</a>
 
 </body>
 </html>
